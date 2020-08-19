@@ -7,10 +7,38 @@ body {
     justify-content: center;
     align-items: center;
     background-color: aquamarine;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 canvas {
     position: absolute;
+}
+
+video {
     border: 10px solid black;
     border-radius: 10%;
+    padding: 0;
+    margin: 0;
+}
+
+@media all and (max-width: 500px) {
+    body {
+        margin-top: 0; 
+        padding-top: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    video {
+        border: none;
+    }
 }
